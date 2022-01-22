@@ -30,7 +30,10 @@ import { MatCardModule } from '@angular/material/card';
 //Componentes do projeto
 import { NavComponent } from './components/nav/nav.component';
 import { HomeComponent } from './components/home/home.component';
+<<<<<<< HEAD
 import { HeaderComponent } from './components/header/header.component';
+=======
+>>>>>>> 1b0bfb7ebaaad2e21ca7a013320d6342b2bc9aea
 
 
 
@@ -40,6 +43,7 @@ import { HeaderComponent } from './components/header/header.component';
     NavComponent,
     HomeComponent,
     HeaderComponent
+
   ],
   imports: [
     BrowserModule,
