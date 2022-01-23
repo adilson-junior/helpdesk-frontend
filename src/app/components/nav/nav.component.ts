@@ -21,6 +21,10 @@ export class NavComponent implements OnInit {
     this.router.navigate(['home'])
   }
 
+  navGitHub() {
+    window.location.href = 'https://github.com/adilson-junior';
+  }
+
   logout() {
     this.authService.logout();
     this.router.navigate(['login']);
