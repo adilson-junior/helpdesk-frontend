@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-nav',
@@ -9,10 +11,20 @@ import { Router } from '@angular/router';
 export class NavComponent implements OnInit {
 
   //cria uma variavel router no construtor e passa uma rota no metodo init
-  constructor(private router: Router) { }
+  constructor(
+    private router: Router,
+    private authService: AuthService,
+    private toats: ToastrService
+    ) { }
 
   ngOnInit(): void {
     this.router.navigate(['home'])
+  }
+
+  logout() {
+    this.authService.logout();
+    this.router.navigate(['login']);
+    this.toats.info('Logout realizado com sucesso')
   }
 
 }
