@@ -22,7 +22,7 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent},
   {    
     //defino que toda rota vazia /'' será direcionado para esse componente.
-    path: '', component: NavComponent, canActivate: [AuthGuard],
+    path: '', component: NavComponent, canActivate: [AuthGuard], canLoad:[AuthGuard],
       children: [
         { path: 'home', component: HomeComponent },
         //Rota do tecnico
